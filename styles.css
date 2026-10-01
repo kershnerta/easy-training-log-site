@@ -1,0 +1,46 @@
+:root {
+  color-scheme: light dark;
+  --navy: #07182b;
+  --navy-soft: #102a43;
+  --emerald: #38c59b;
+  --emerald-dark: #08745b;
+  --paper: #f5f8fa;
+  --ink: #17222c;
+  --muted: #60717e;
+  --card: #ffffff;
+  --border: #d6e0e6;
+}
+
+* { box-sizing: border-box; }
+html { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.6; }
+body { background: var(--paper); color: var(--ink); margin: 0; }
+.shell { margin-inline: auto; max-width: 800px; padding-inline: 20px; }
+.hero { background: var(--navy); color: white; padding-block: 64px 54px; }
+.hero.compact { padding-block: 46px 40px; }
+.eyebrow { color: var(--emerald); font-size: 0.78rem; font-weight: 800; letter-spacing: 0.13em; margin: 0; text-transform: uppercase; }
+h1 { font-size: clamp(2.4rem, 9vw, 4rem); letter-spacing: -0.045em; line-height: 1.02; margin: 14px 0; }
+h2 { font-size: 1.3rem; line-height: 1.25; margin: 0 0 10px; }
+p, li { max-width: 68ch; }
+.lead { color: #d8e7ef; font-size: 1.16rem; }
+nav { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 28px; }
+a { color: var(--emerald-dark); font-weight: 700; }
+.hero a { color: var(--emerald); }
+main { padding-block: 42px 52px; }
+main > section:first-child { margin-bottom: 28px; }
+.grid { display: grid; gap: 18px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+.card p:last-child { margin-bottom: 0; }
+.notice { color: var(--muted); font-size: 0.9rem; margin-top: 32px; }
+.policy h2 { margin-top: 32px; }
+.support-action { margin-top: 36px; }
+.button { background: var(--emerald-dark); border-radius: 10px; color: white; display: inline-block; padding: 11px 16px; text-decoration: none; }
+footer { color: var(--muted); font-size: 0.86rem; padding-bottom: 42px !important; }
+
+@media (min-width: 680px) {
+  .grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root { --paper: #07131f; --ink: #eef5f7; --muted: #a9bbc5; --card: #102436; --border: #294255; --emerald-dark: #62d8b5; }
+  .button { background: #159875; color: white; }
+}
